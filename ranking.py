@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import lxml
 from PIL import Image
 from urllib.request import Request,urlopen
 
