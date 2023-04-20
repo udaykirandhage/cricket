@@ -23,9 +23,7 @@ selectedNavbar=option_menu(menu_title=None,options=["Home","Awards","Highlights"
 
 
 
-st.sidebar.title("Use These Below Options To View Your Data")
-menu0=["Male Team","Female Team"]
-d=st.sidebar.selectbox("Select ",menu0)
+
 
 
 
@@ -47,7 +45,11 @@ expander_bar.markdown("""
 * **Data source:** [NDTv , Icc Cricket](https://sports.ndtv.com/cricket/icc-rankings).
 """)
 if selectedNavbar =="Home":
+    st.sidebar.title("Use These Below Options To View Your Data")
+    menu0=["Male Team","Female Team"]
+    d=st.sidebar.selectbox("Select ",menu0)
     if d=="Male Team":
+
         menu1=["Player","Team"]
         a=st.sidebar.selectbox("Select ",menu1)
         if a=="Team":
@@ -232,4 +234,3 @@ if selectedNavbar =="Home":
             "container": {"padding": "0!important", "background-color": "#fafafa","width":"100vw"},
             "icon": {"color": "orange", "font-size": "10px"}, 
             "nav-link": {"font-size": "15px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"}},)
-
