@@ -1,0 +1,11 @@
+[theme]
+
+primaryColor="#F63366"
+
+backgroundColor="#fff"
+
+secondaryBackgroundColor="#F0F2F6"
+
+texColor="#262720"
+
+backgroundImage=url("https://wallpaperaccess.com/full/1567833.jpg")
