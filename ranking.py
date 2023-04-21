@@ -74,51 +74,51 @@ if selectedNavbar =="Home":
             menu3=["Test","ODI","T20"]
             b=st.sidebar.selectbox("Select Match Type",menu3)
         
-        if b=="Test":
-            image = Image.open('test.jpg')
-            st.image(image, width=80)
-            st.markdown('Here is your Top 10 Players list in T20')
-            menu4=["Batting","Bowling","All Rounder"]
-            c=st.selectbox("Select The Player Type",menu4)
-            if c=="Batting":
-                df=data[1]
-                st.dataframe(df)
-            if c=="All Rounder":
-                df=data[3]
-                st.dataframe(df)
-            if c=="Bowling":
-                df=data[2]
-                st.dataframe(df)
-        if b=="ODI":
-            menu5=["Batting","Bowling","All Rounder"]
-            c=st.selectbox("Select The Player Type",menu5)
-            image = Image.open('odi.jpg')
-            st.image(image, width=80)
-            st.markdown('Here is your Top 10 Players list in T20')
-            if c=="Batting":
-                df=data[5]
-                st.dataframe(df)
-            if c=="All Rounder":
-                df=data[7]
-                st.dataframe(df)
-            if c=="Bowling":
-                df=data[6]
-                st.dataframe(df)
-        if b=="T20":
-            menu5=["Batting","Bowling","All Rounder"]
-            c=st.selectbox("Select",menu5)
-            image = Image.open('T20.png')
-            st.image(image, width=80)
-            st.markdown('Here is your Top 10 Players list in T20')
-            if c=="Batting":
-                df=data[9]
-                st.dataframe(df)
-            if c=="All Rounder":
-                df=data[10]
-                st.dataframe(df)
-            if c=="Bowling":
-                df=data[11]
-                st.dataframe(df)
+                if b=="Test":
+                    image = Image.open('test.jpg')
+                    st.image(image, width=80)
+                    st.markdown('Here is your Top 10 Players list in T20')
+                    menu4=["Batting","Bowling","All Rounder"]
+                    c=st.selectbox("Select The Player Type",menu4)
+                    if c=="Batting":
+                        df=data[1]
+                        st.dataframe(df)
+                    if c=="All Rounder":
+                        df=data[3]
+                        st.dataframe(df)
+                    if c=="Bowling":
+                        df=data[2]
+                        st.dataframe(df)
+                if b=="ODI":
+                    menu5=["Batting","Bowling","All Rounder"]
+                    c=st.selectbox("Select The Player Type",menu5)
+                    image = Image.open('odi.jpg')
+                    st.image(image, width=80)
+                    st.markdown('Here is your Top 10 Players list in T20')
+                    if c=="Batting":
+                        df=data[5]
+                        st.dataframe(df)
+                    if c=="All Rounder":
+                        df=data[7]
+                        st.dataframe(df)
+                    if c=="Bowling":
+                        df=data[6]
+                        st.dataframe(df)
+                if b=="T20":
+                    menu5=["Batting","Bowling","All Rounder"]
+                    c=st.selectbox("Select",menu5)
+                    image = Image.open('T20.png')
+                    st.image(image, width=80)
+                    st.markdown('Here is your Top 10 Players list in T20')
+                    if c=="Batting":
+                        df=data[9]
+                        st.dataframe(df)
+                    if c=="All Rounder":
+                        df=data[10]
+                        st.dataframe(df)
+                    if c=="Bowling":
+                        df=data[11]
+                        st.dataframe(df)
     req2= Request('https://www.icc-cricket.com/rankings/womens/team-rankings/odi',headers={'User-Agent':'Mozilla/5.0'})
     webpage=urlopen(req2)
     data1=pd.read_html(webpage,header=0)
