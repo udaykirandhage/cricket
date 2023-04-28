@@ -74,7 +74,7 @@ data8=pd.read_html(webpage8,header=0)
 
 # Nav bar creation 
 
-selectedNavbar=option_menu(menu_title=None,options=["Home","Awards","Highlights","Results","Contact-Us"],orientation="horizontal",default_index=0,styles={
+selectedNavbar=option_menu(menu_title=None,options=["Home","Awards","Match Highlights","Results","Contact-Us"],orientation="horizontal",default_index=0,styles={
         "container": {"padding": "5!important","width":"100vw"},
         "icon": {"color": "orange", "font-size": "10px"}, 
         "nav-link": {"font-size": "15px", "text-align": "left", "margin":"0px", "--hover-color": "#E9DCCF"}},)
