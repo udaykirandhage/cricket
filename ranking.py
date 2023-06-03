@@ -476,7 +476,7 @@ if selectedNavbar == "Statistics":
 
 
                         df_testdata = pd.DataFrame(data_test)
-                        selected_countries = st.multiselect('Select Countries', df_testdata['Country'])
+                        selected_countries = st.multiselect('Select Countries', df_testdata['Country'],default=["India","Australia","Pakistan","Bangladesh"])
                         filtered_data = df_testdata[df_testdata['Country'].isin(selected_countries)]
                         fig, ax = plt.subplots()
 
