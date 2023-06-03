@@ -476,7 +476,7 @@ if selectedNavbar == "Statistics":
 
 
                         df_testdata = pd.DataFrame(data_test)
-                        selected_countries = st.multiselect('Select Countries', df_testdata['Country'],["India","Australia","Pakistan","Bangladesh"])
+                        selected_countries = st.multiselect('Select Countries', df_testdata['Country'])
                         filtered_data = df_testdata[df_testdata['Country'].isin(selected_countries)]
                         fig, ax = plt.subplots()
 
@@ -504,6 +504,31 @@ if selectedNavbar == "Statistics":
 
 
             if b=="ODI":
+
+                st.markdown('Here is your selected data  ')
+                df=data[4]
+                
+                
+                    
+                Country=st.sidebar.multiselect("Select The Country",options=df["Team"],default=["India","Australia","Pakistan","Bangladesh"])
+                df_selection = df.query("Team==@Country")
+                st.dataframe(df_selection)
+                with plt.style.context('ggplot'):
+                        fig,ax=plt.subplots()
+                        ax.barh(df_selection["Team"],df_selection["Rating"], color='#377eb8')
+                        ax.set_title('Ratings of Countries', fontsize=20, pad=15)
+                        ax.set_xlabel('Countries', fontsize=18, labelpad=10)
+                        ax.set_ylabel('Ratings', fontsize=18, labelpad=10)
+                        ax.tick_params(axis='both', labelsize=15)
+                        col1.pyplot(fig)
+                with plt.style.context('ggplot'):
+                        fig,ax=plt.subplots()
+                        ax.barh(df_selection["Team"],df_selection["Points"], color='#377eb8')
+                        ax.set_title('Overall Points of Countries', fontsize=20, pad=15)
+                        ax.set_xlabel('Countries', fontsize=18, labelpad=10)
+                        ax.set_ylabel('Points', fontsize=18, labelpad=10)
+                        ax.tick_params(axis='both', labelsize=15)
+                        col2.pyplot(fig)
  
                 col_1,col_2=st.columns(2)
                 
@@ -557,7 +582,7 @@ if selectedNavbar == "Statistics":
                     #st.dataframe(df)
             if b=="T20":
                 st.markdown('Here is your selected data  ')
-                df=data[4]
+                df=data[8]
                 
                 
                     
