@@ -618,7 +618,7 @@ if selectedNavbar == "Statistics":
 
 
                             fig, ax = plt.subplots()
-                            ax.bar(team_data.index, team_data.values)
+                            ax.plot(team_data.index, team_data.values)
 
                             
                             ax.set_title(f'{selected_team} Performance Over the Years')
