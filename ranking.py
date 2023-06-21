@@ -619,7 +619,7 @@ if selectedNavbar == "Statistics":
 
                             fig, ax = plt.subplots()
                             ax.plot(team_data.index, team_data.values)
-                            plt.ylim(0,20)
+                            plt.ylim(int(0,20))
                             
                             ax.set_title(f'{selected_team} Performance Over the Years')
                             ax.set_xlabel('Year')
