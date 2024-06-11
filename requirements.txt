@@ -11,6 +11,5 @@ seaborn==0.12.2
 langchain
 llama-index==0.7.20
 openai
-streamlit==1.24.1
 fpdf
 pypdf
