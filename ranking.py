@@ -8,6 +8,8 @@ import json
 from streamlit_lottie import st_lottie
 import requests
 import matplotlib.pyplot as plt
+from urllib.request import urlopen
+from urllib.error import HTTPError
 
 st.set_page_config(page_title="ICC",layout="wide")
 
