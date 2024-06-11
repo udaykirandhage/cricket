@@ -27,9 +27,9 @@ st.markdown(page_bg_img,unsafe_allow_html=True)
 
 
 
-//reques = Request('https://sports.ndtv.com/cricket/icc-rankings',headers={'User-Agent':'Mozilla/5.0'})
-//webpage=urlopen(reques)
-//data=pd.read_html(webpage,header=0)
+#reques = Request('https://sports.ndtv.com/cricket/icc-rankings',headers={'User-Agent':'Mozilla/5.0'})
+#webpage=urlopen(reques)
+#data=pd.read_html(webpage,header=0)
 
 
 req2= Request('https://www.icc-cricket.com/rankings/womens/team-rankings/odi',headers={'User-Agent':'Mozilla/5.0'})
