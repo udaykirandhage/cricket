@@ -27,8 +27,8 @@ st.markdown(page_bg_img,unsafe_allow_html=True)
 
 
 
-req = Request('https://sports.ndtv.com/cricket/icc-rankings',headers={'User-Agent':'Mozilla/5.0'})
-webpage=urlopen(req)
+reques = Request('https://sports.ndtv.com/cricket/icc-rankings',headers={'User-Agent':'Mozilla/5.0'})
+webpage=urlopen(reques)
 data=pd.read_html(webpage,header=0)
 
 
